@@ -63,7 +63,7 @@ export default class PickImage extends React.Component{
         }
 
         data.append('digit', file)
-        fetch('https://818b-2405-201-4012-703f-6198-d2bb-9a90-1726.ngrok.io',{
+        fetch('http://dbde-2405-201-4012-703f-ed6d-89f1-24ab-9cb1.ngrok.io/predict',{
             method: 'POST',
             body : data,
             headers : {
@@ -71,6 +71,7 @@ export default class PickImage extends React.Component{
             }
         })
         .then((response)=>{
+            console.log('inside then!')
             return response.json()
             //to know if the api is successfully called
         })
